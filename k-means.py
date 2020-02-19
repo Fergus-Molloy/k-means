@@ -96,7 +96,12 @@ def main(iterations=1):
 
 if __name__ == "__main__":
     try:
-        main(iterations=int(sys.argv[1]))
+        i=int(sys.argv[1])
+        if(i<1):
+            raise ValueError("number of iterations cannot be less than 1")
+        main(iterations=i)
+    except ValueError as e:
+        print(e)
     except IndexError:
         main()
     except KeyboardInterrupt:
