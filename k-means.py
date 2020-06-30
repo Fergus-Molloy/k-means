@@ -8,7 +8,7 @@ class Point:
 def distance(p1, p2):
     #return the euclidian distance between two points
     sqaure1 = (p1.x-p2.x)**2
-    sqaure2 = (p1.y-p2.y)**2
+    sqaure2 = (p2.y-p2.y)**2
     return (sqaure1+sqaure2)**0.5
 
 def equal_points(p1, p2):
@@ -32,13 +32,12 @@ def average_point(arr):
 def main(iterations=1):
     #create points and add to arr
     a0 = Point(1.0,1.0)
-    a1 = Point(1.0,0.0)
-    a2 = Point(0.0,2.0)
-    a3 = Point(2.0,4.0)
-    a4 = Point(3.0,5.0)
-    arr = [a0, a1, a2, a3, a4]
+    a1 = Point(2.0,1.0)
+    a2 = Point(4.0,3.0)
+    a3 = Point(5.0,4.0)
+    arr = [a0, a1, a2, a3]
     #k==2
-    cluster_means = [a0, a2]
+    cluster_means = [a0, a1]
     prev_cluster_means = [a1, a3]
     cl1 = []
     cl2 = []
